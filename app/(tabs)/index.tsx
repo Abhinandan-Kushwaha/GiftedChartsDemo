@@ -111,6 +111,8 @@ export default function HomeScreen() {
         isAnimated
         animationDuration={1200}
         showGradient
+        highlightEnabled
+        lowlightOpacity={0.2}
       />
     </View>
   )
