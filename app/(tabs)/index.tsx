@@ -1,74 +1,204 @@
-import { Image, StyleSheet, Platform } from 'react-native';
+import {
+  View,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  ScrollView
+} from 'react-native'
+import { BarChart, PieChart } from 'react-native-gifted-charts'
+import { useState } from 'react'
 
-import { HelloWave } from '@/components/HelloWave';
-import ParallaxScrollView from '@/components/ParallaxScrollView';
-import { ThemedText } from '@/components/ThemedText';
-import { ThemedView } from '@/components/ThemedView';
+const gray = '#27252a'
+const lightGray = '#6e6c72'
+const linkBlue = '#2387DC'
+
+const incomes = ['$92,648.50', '$632,632.41', '$2,592,986.27']
+const invoices = ['$56,703.42', '$388,455.33', '$7,356,986.50']
+
+const d1 = [
+  {
+    value: 4,
+    frontColor: '#0078F8',
+    gradientColor: '#0EB2F8',
+    color: '#0078F8'
+  },
+  {
+    value: 6,
+    frontColor: '#FF9704',
+    gradientColor: '#FCC601',
+    color: '#FF9704'
+  },
+  {
+    value: 2,
+    frontColor: '#B55AE2',
+    gradientColor: '#D485E6',
+    color: '#B55AE2'
+  },
+  {
+    value: 3,
+    frontColor: '#F22750',
+    gradientColor: '#FA4880',
+    color: '#F22750'
+  },
+  {
+    value: 7,
+    frontColor: '#33C83A',
+    gradientColor: '#30E45A',
+    color: '#33C83A'
+  },
+  {
+    value: 6,
+    frontColor: '#939393',
+    gradientColor: '#BBBBBD',
+    color: '#939393'
+  },
+  {
+    value: 1,
+    frontColor: '#F2CA02',
+    gradientColor: '#F3E100',
+    color: '#F2CA02'
+  },
+  {
+    value: 5,
+    frontColor: '#30CD33',
+    gradientColor: '#33E059',
+    color: '#30CD33'
+  }
+]
 
 export default function HomeScreen() {
-  return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
-      headerImage={
-        <Image
-          source={require('@/assets/images/partial-react-logo.png')}
-          style={styles.reactLogo}
+  const [index, setIndex] = useState(0)
+
+  const [data, setData] = useState(d1)
+
+  const handleTabPress = (index: number) => () => {
+    setIndex(index)
+  }
+
+  const tabButton = (i: number) => ({
+    ...styles.tabButton,
+    backgroundColor: i === index ? lightGray : 'transparent'
+  })
+
+  const Title = () => <Text style={styles.title}>OverView</Text>
+
+  const TabView = () => (
+    <View style={styles.tabContainer}>
+      <TouchableOpacity style={tabButton(0)} onPress={handleTabPress(0)}>
+        <Text style={styles.tabText}>Today</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={tabButton(1)} onPress={handleTabPress(1)}>
+        <Text style={styles.tabText}>Last 7 days</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={tabButton(2)} onPress={handleTabPress(2)}>
+        <Text style={styles.tabText}>Last 30 days</Text>
+      </TouchableOpacity>
+    </View>
+  )
+
+  const Bars = () => (
+    <View style={styles.card}>
+      <Text style={styles.tabTextLink}>INCOME</Text>
+      <Text style={styles.tabTextTitle}>{incomes[index]}</Text>
+      <BarChart
+        data={data}
+        hideAxesAndRules
+        hideYAxisText
+        initialSpacing={0}
+        barWidth={20}
+        barBorderRadius={8}
+        adjustToWidth
+        isAnimated
+        animationDuration={1200}
+        showGradient
+      />
+    </View>
+  )
+
+  const Pie = () => (
+    <View style={styles.card}>
+      <Text style={styles.tabTextLink}>INVOICES</Text>
+      <View style={{ alignSelf: 'center' }}>
+        <PieChart
+          data={data}
+          radius={130}
+          innerRadius={90}
+          strokeColor={gray}
+          strokeWidth={8}
+          donut
+          innerCircleColor={gray}
+          centerLabelComponent={() => (
+            <View style={{ alignItems: 'center', justifyContent: 'center' }}>
+              <Text style={styles.tabTextLink}>UNPAID INVOICES</Text>
+              <Text style={{ color: 'white', fontSize: 20 }}>
+                {invoices[index]}
+              </Text>
+            </View>
+          )}
         />
-      }>
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome!</ThemedText>
-        <HelloWave />
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 1: Try it</ThemedText>
-        <ThemedText>
-          Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
-          Press{' '}
-          <ThemedText type="defaultSemiBold">
-            {Platform.select({
-              ios: 'cmd + d',
-              android: 'cmd + m',
-              web: 'F12'
-            })}
-          </ThemedText>{' '}
-          to open developer tools.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 2: Explore</ThemedText>
-        <ThemedText>
-          Tap the Explore tab to learn more about what's included in this starter app.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
-        <ThemedText>
-          When you're ready, run{' '}
-          <ThemedText type="defaultSemiBold">npm run reset-project</ThemedText> to get a fresh{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> directory. This will move the current{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> to{' '}
-          <ThemedText type="defaultSemiBold">app-example</ThemedText>.
-        </ThemedText>
-      </ThemedView>
-    </ParallaxScrollView>
-  );
+      </View>
+    </View>
+  )
+
+  return (
+    <View style={styles.container}>
+      <Title />
+      <TabView />
+      <ScrollView>
+        <Bars />
+        <Pie />
+      </ScrollView>
+    </View>
+  )
 }
 
 const styles = StyleSheet.create({
-  titleContainer: {
+  container: {
+    flex: 1,
+    paddingHorizontal: 10,
+    paddingTop: 14,
+    backgroundColor: 'black'
+  },
+  title: {
+    fontSize: 26,
+    color: 'white',
+    marginBottom: 20
+  },
+  tabContainer: {
+    width: '100%',
+    height: 30,
+    borderRadius: 10,
+    backgroundColor: gray,
     flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
+    justifyContent: 'space-around',
+    alignItems: 'center'
   },
-  stepContainer: {
-    gap: 8,
-    marginBottom: 8,
+  tabButton: {
+    width: '33%',
+    height: '100%',
+    borderRadius: 10,
+    justifyContent: 'center'
   },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
-    position: 'absolute',
+  tabText: {
+    color: 'white',
+    fontSize: 12,
+    fontWeight: 'bold',
+    alignSelf: 'center'
   },
-});
+  card: {
+    width: '100%',
+    height: 300,
+    backgroundColor: gray,
+    borderRadius: 10,
+    marginTop: 20,
+    padding: 14
+  },
+  tabTextLink: {
+    color: linkBlue
+  },
+  tabTextTitle: {
+    fontSize: 20,
+    marginTop: 6,
+    color: 'white'
+  }
+})

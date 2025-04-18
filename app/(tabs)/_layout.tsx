@@ -17,13 +17,17 @@ export default function TabLayout() {
         tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
         headerShown: false,
         tabBarButton: HapticTab,
-        tabBarBackground: TabBarBackground,
+        // tabBarBackground: TabBarBackground,
         tabBarStyle: Platform.select({
           ios: {
             // Use a transparent background on iOS to show the blur effect
             position: 'absolute',
+            backgroundColor: 'rgba(0,0,0,0.3)',
+            opacity: 0.1,
           },
-          default: {},
+          default: {
+            backgroundColor: 'rgba(0,0,0,0.3)',
+          },
         }),
       }}>
       <Tabs.Screen
