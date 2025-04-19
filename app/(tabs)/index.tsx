@@ -8,16 +8,16 @@ import {
 import { BarChart, PieChart } from 'react-native-gifted-charts'
 import { useState } from 'react'
 
-const gray = '#27252a'
+const gray = 'blue'
 const lightGray = '#6e6c72'
 const linkBlue = '#2387DC'
 
-const incomes = ['$32,648.50', '$632,632.41', '$2,592,986.27']
+const incomes = ['$55,555.50', '$632,632.41', '$2,592,986.27']
 const invoices = ['$56,703.42', '$388,455.33', '$7,356,986.50']
 
 const d1 = [
   {
-    value: 4,
+    value: 12,
     frontColor: '#0078F8',
     gradientColor: '#0EB2F8',
     color: '#0078F8'
@@ -35,7 +35,7 @@ const d1 = [
     color: '#B55AE2'
   },
   {
-    value: 3,
+    value: 55,
     frontColor: '#F22750',
     gradientColor: '#FA4880',
     color: '#F22750'
@@ -113,6 +113,8 @@ export default function HomeScreen() {
         showGradient
         highlightEnabled
         lowlightOpacity={0.2}
+        showValuesAsTopLabel
+        topLabelTextStyle={{color:'white'}}
       />
     </View>
   )
@@ -159,7 +161,7 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingHorizontal: 10,
     paddingTop: 14,
-    backgroundColor: 'black'
+    backgroundColor: 'red'
   },
   title: {
     fontSize: 26,
