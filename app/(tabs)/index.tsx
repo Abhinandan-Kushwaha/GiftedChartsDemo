@@ -8,7 +8,7 @@ import {
 import { BarChart, PieChart } from 'react-native-gifted-charts'
 import { useState } from 'react'
 
-const gray = 'blue'
+const gray = '#27252a'
 const lightGray = '#6e6c72'
 const linkBlue = '#2387DC'
 
@@ -35,7 +35,7 @@ const d1 = [
     color: '#B55AE2'
   },
   {
-    value: 55,
+    value: 5,
     frontColor: '#F22750',
     gradientColor: '#FA4880',
     color: '#F22750'
@@ -161,7 +161,7 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingHorizontal: 10,
     paddingTop: 14,
-    backgroundColor: 'red'
+    backgroundColor: '#000'
   },
   title: {
     fontSize: 26,
