@@ -12,7 +12,7 @@ const gray = '#27252a'
 const lightGray = '#6e6c72'
 const linkBlue = '#2387DC'
 
-const incomes = ['$82,648.50', '$632,632.41', '$2,592,986.27']
+const incomes = ['$72,648.50', '$632,632.41', '$2,592,986.27']
 const invoices = ['$56,703.42', '$388,455.33', '$7,356,986.50']
 
 const d1 = [

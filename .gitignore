@@ -3,6 +3,9 @@
 # dependencies
 node_modules/
 
+# keys
+ambient-inquiry-182706-f16c89f64bc4.json
+
 # Expo
 .expo/
 dist/
