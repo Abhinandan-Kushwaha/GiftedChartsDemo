@@ -5,6 +5,8 @@
 Download the [demo app](https://play.google.com/store/apps/details?id=com.giftedcharts.demo) from Play Store.
 
 ## Demo snacks
+Showcase your own snack by editing the README file of this repo and raising a PR! <br />
+Your snack might get published in the Demo app on Play Store!
 
 | # | Snack link | Demo / Description | Developer |
 | - | ---------- | ------------------ | --------- |
