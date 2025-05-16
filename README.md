@@ -1,50 +1,16 @@
-# Welcome to your Expo app 👋
+## Gifted Charts Demo
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+#### The expo app showcasing some charts made using [react-native-gifted-charts](https://www.npmjs.com/package/react-native-gifted-charts)
 
-## Get started
+Download the [demo app](https://play.google.com/store/apps/details?id=com.giftedcharts.demo) from Play Store.
 
-1. Install dependencies
+## Demo snacks
 
-   ```bash
-   npm install
-   ```
+| # | Snack link | Demo / Description | Developer |
+| - | ---------- | ------------------ | --------- |
+| 1 | [Focus with external control multiline and Bar synchronised](https://snack.expo.dev/@ak_97/focus-with-external-control-multiline?platform=android) | <img src = "https://github.com/user-attachments/assets/ca672d9c-b14d-4077-85e6-f3bcaff79f04" height = 300 alt='' /> | [Abhinandan](https://github.com/Abhinandan-Kushwaha) |
+| 2 | [Dashed Area chart](https://snack.expo.dev/@ak_97/dashed-area-chart) | <img width="240" alt="dashed-area" src="https://github.com/user-attachments/assets/e75b96ca-b14d-4189-84bd-ad87ddb17d58" /> | [Abhinandan](https://github.com/Abhinandan-Kushwaha) |
+| 3 | [Circular Radar chart](https://snack.expo.dev/@ak_97/horizontal-long-x-labels_) | <img width="300" alt="radar" src="https://github.com/user-attachments/assets/64805bf1-46d2-4770-9ff5-db7ea4575a25" /> | [Abhinandan](https://github.com/Abhinandan-Kushwaha) |
+| 4 | [Segmented line chart](https://snack.expo.dev/@ak_97/segmented-line-chart) | <img width="300" alt="segmented" src="https://github.com/user-attachments/assets/111bb21d-548a-4a7b-9416-0dcfa7641f5e" /> | [Abhinandan](https://github.com/Abhinandan-Kushwaha) |
+| 5 | [Horizontal line chart with long X-labels](https://snack.expo.dev/@ak_97/horizontal-long-x-labels) | <img width="300" alt="horizLongLabels" src="https://github.com/user-attachments/assets/80d0a7d9-2521-4b7f-a87e-5b74f2d4ef91" /> | [Abhinandan](https://github.com/Abhinandan-Kushwaha) |
 
-2. Start the app
-
-   ```bash
-    npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
