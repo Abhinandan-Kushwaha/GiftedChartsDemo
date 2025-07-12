@@ -15,4 +15,4 @@ Your snack might get published in the Demo app on Play Store!
 | 3 | [Circular Radar chart](https://snack.expo.dev/@ak_97/radar-textanchor) | <img width="300" alt="radar" src="https://github.com/user-attachments/assets/64805bf1-46d2-4770-9ff5-db7ea4575a25" /> | [Abhinandan](https://github.com/Abhinandan-Kushwaha) |
 | 4 | [Segmented line chart](https://snack.expo.dev/@ak_97/segmented-line-chart) | <img width="300" alt="segmented" src="https://github.com/user-attachments/assets/111bb21d-548a-4a7b-9416-0dcfa7641f5e" /> | [Abhinandan](https://github.com/Abhinandan-Kushwaha) |
 | 5 | [Horizontal line chart with long X-labels](https://snack.expo.dev/@ak_97/horizontal-long-x-labels) | <img width="300" alt="horizLongLabels" src="https://github.com/user-attachments/assets/80d0a7d9-2521-4b7f-a87e-5b74f2d4ef91" /> | [Abhinandan](https://github.com/Abhinandan-Kushwaha) |
-
+| 6 | [barInnerComponent](https://snack.expo.dev/@ak_97/bar-inner-component) | <img width="250" alt="barInnerComponent" src="https://github.com/user-attachments/assets/b00531b6-b079-45a8-83d8-7fc4417b3b79" /> | [Abhinandan](https://github.com/Abhinandan-Kushwaha) |
