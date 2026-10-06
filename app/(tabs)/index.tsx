@@ -66,10 +66,20 @@ const d1 = [
   }
 ]
 
+const valuesByRange = [
+  d1.map(d => d.value),
+  [28, 14, 9, 18, 22, 12, 6, 16],
+  [64, 41, 25, 52, 70, 33, 18, 47]
+]
+
+const datasets = valuesByRange.map(values =>
+  d1.map((d, i) => ({ ...d, value: values[i] }))
+)
+
 export default function HomeScreen() {
   const [index, setIndex] = useState(0)
 
-  const [data, setData] = useState(d1)
+  const data = datasets[index]
 
   const handleTabPress = (index: number) => () => {
     setIndex(index)

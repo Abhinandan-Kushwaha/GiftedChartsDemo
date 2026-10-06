@@ -11,6 +11,10 @@ const MAPPING = {
   // See SF Symbols in the SF Symbols app on Mac.
   'house.fill': 'home',
   'paperplane.fill': 'send',
+  'chart.bar.fill': 'bar-chart',
+  'chart.xyaxis.line': 'show-chart',
+  'chart.pie.fill': 'pie-chart',
+  'square.grid.2x2.fill': 'apps',
   'chevron.left.forwardslash.chevron.right': 'code',
   'chevron.right': 'chevron-right',
 } as Partial<
